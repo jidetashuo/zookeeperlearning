@@ -56,7 +56,8 @@ public class MyZooClient implements Watcher {
      */
     private void setProperties() {
         try {
-            //获取数据，并设置观察的操作
+            //获取数据，并设置观察的操作，
+            //即每次获取数据时，都再次设置观察，表示：以后该节点数据发生变化，要通知我
             this.url = new String(zooKeeper.getData("/configcenter/url", true, null));
             this.username = new String(zooKeeper.getData("/configcenter/username", true, null));
             this.password = new String(zooKeeper.getData("/configcenter/password", true, null));
