@@ -49,7 +49,26 @@ cd /etc
 mkdir zookeeper
 cd zookeeper
 vim zoo.cfg
+复制如下配置：
+#  milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is stored.
+dataDir=/usr/local/zookeeper/data
+# the port at which the clients will connect
+clientPort=2181
+
+
 export ZOOCFGDIR=/etc/zookeeper
+
+
+
+
 
 # 运行并测试
 [root@iZ2zeap997asuc4yr0bw77Z zookeeper]# zkServer.sh start
