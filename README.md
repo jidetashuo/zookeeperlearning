@@ -1,3 +1,27 @@
+### 前言
+nothing
+
+---
+### 目录说明
+```
+zookeeper-learning
+    |
+    ├── configuration 使用zookeeper实现配置中心
+    |      ├── Application  模拟客户端程序
+    |      ├── ConfigCenter 配置中心
+    |      └── MyZooClient  从配置中心获取或更新配置
+    |
+    ├── consistanthash 使用zookeeper实现分布式锁
+    |      ├── SimpleDistributedLock 使用zookeeper实现分布式锁
+    |      └── CuratorDistributedLockSample Curator框架中分布式锁使用演示
+    |--TODO
+
+```
+
+
+
+
+---
 ### Zookeeper介绍
 Zookeeper是一个开放源码的分布式服务协调组件，是Google Chubby的开源实现。
 是一个高性能的分布式数据一致性解决方案。
@@ -31,7 +55,7 @@ ZooKeeper是个CP（一致性+分区容错性）的，
 
 
 
-
+---
 ### 安装单机版zookeeper
 
 ```
@@ -169,6 +193,8 @@ znode以某种方式发生变化时，“观察”（watch）机制可以让客�
 zookeeper中的观察是一次性触发器，即client在一个节点上设置watch，随后节点内容改变，client将获取事件。
 但当节点内容再次改变，client不会获取这个事件，除非它又执行了一次读操作并设置watch
 
+
+---
 ### 选举Leader的过程
 来自：[Zookeeper的Leader选举](http://www.cnblogs.com/leesf456/p/6107600.html)
 
